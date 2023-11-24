@@ -1,9 +1,11 @@
 <?xml version="1.0" ?>
 <launch>
-  <arg name="ur_model" default="ur10" />
+  <arg name="ur_model" default="ur5e" />
   <arg name="ur_hw_version"  default="cb3" />
   <arg name="sim" default="false" />
   <arg name="robot_description_launch" default="$(find ur_description)/launch/load_$(arg ur_model).launch" doc="Robot description launch file."/>
+  <arg name="robot_description_file" default="$(find ur_description)/launch/load_$(arg ur_model).launch" doc="Robot description launch file."/>
+
 
   <include file="$(arg robot_description_launch)" />
   
